@@ -1,0 +1,27 @@
+---
+layout: base.html
+title: Home
+description: UI Projects
+---
+
+<section class="py-4">
+  <h1 class="font-bold text-2xl">UI Projects</h1>
+  <p>My list of UI implementations.</p>
+</section>
+
+<ul class="pl-4 list-disc">
+  {%- for project in collections.projects -%}
+  <li>
+    <div class="flex flex-col">
+      <a
+        rel="noreferrer noopener"
+        href="{{ project.url }}"
+        class="text-blue-400 visited:text-indigo-600 after:block after:bottom-0 after:h-1 after:w-full data-[active=true]:text-blue-600 data-[active=true]:after:bg-blue-600 after:skew-x-0 after:skew-y-3 after:rounded"
+      >
+        <h1 class="text-lg">{{ project.data.title }}</h1>
+      </a>
+      <p>{{ project.data.description }}</p>
+    </div>
+  </li>
+  {%- endfor -%}
+</ul>

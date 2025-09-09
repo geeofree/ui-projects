@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <title>ジョフリ | {{ title }}</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="{{ eleventy.generator }}">
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="{{ page.url }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:image" content="/images/thumbnail.jpg">
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ page.url }}">
+    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:description" content="{{ description }}">
+    <meta name="twitter:image" content="/images/thumbnail.jpg">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="manifest" href="/images/site.webmanifest">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/output.css">
+  </head>
+  <body>
+    <div class="w-full lg:w-1/2 mx-auto">
+      <nav class="flex flex-col sm:flex-row sm:items-center justify-between px-4 lg:px-0">
+        <figure class="flex items-center">
+          <img src="/images/icon.webp" alt="Site icon." class="w-16">
+          <figcaption class="flex flex-col">
+            <span>GEO</span>
+            <span>GLGRN.</span>
+          </figcaption>
+        </figure>
+        <h1 class="text-2xl">ジョフリ</h1>
+      </nav>
+      <main>{{ content }}</main>
+    </div>
+    {% if js %}<script src="/js/{{ js }}"></script>{% endif %}
+  </body>
+</html>
