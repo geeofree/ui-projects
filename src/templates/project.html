@@ -6,6 +6,11 @@ layout: base.html
 <section class="py-4 px-4 lg:px-0">
   <h1 class="text-2xl">{{ title }}</h1>
   <p>{{ description }}</p>
+  <p>View the code <a
+    rel="noreferrer noopener"
+    target="_blank"
+    class="text-blue-400 visited:text-indigo-600 after:block after:bottom-0 after:h-1 after:w-full data-[active=true]:text-blue-600 data-[active=true]:after:bg-blue-600 after:skew-x-0 after:skew-y-3 after:rounded"
+    href="https://github.com/geeofree/ui-projects/tree/main/src/projects/{{ project_name }}">here</a></p>
 </section>
 
 {{ content }}
