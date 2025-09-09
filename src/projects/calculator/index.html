@@ -1,9 +1,53 @@
 ---
-tags: projects
-layout: base.html
+layout: project.html
 title: Calculator
 description: "A calculator implemented with an interpreter."
 js: calculator.js
 ---
 
-<h1>Hello calculator</h1>
+<section class="py-8 px-4 lg:p-8 flex justify-center items-center">
+  <div id="calculator-container" class="flex flex-col w-full md:max-w-lg border border-slate-900 rounded">
+    <div id="calculator-screen" class="
+      rounded flex items-center justify-end p-4
+      text-white
+      bg-slate-700 min-h-16 border
+      text-2xl font-bold">
+    </div>
+    <div id="calculator-buttons" class="grid grid-cols-4 gap-2 p-4 bg-slate-50">
+      {% for calculatorButton in calculatorButtons %}
+      <button
+        id="calculator-button"
+        data-id="{{ calculatorButton.name }}"
+        data-value="{{ calculatorButton.text }}"
+        class="
+        cursor-pointer min-h-16 border
+        rounded
+
+        {% if calculatorButton.name == 'equals'  %}
+        text-green-700
+        bg-green-100
+        hover:bg-green-200
+        border-green-700
+        {% elsif calculatorButton.name == 'delete' %}
+        text-yellow-700
+        bg-yellow-100
+        hover:bg-yellow-200
+        border-yellow-700
+        {% elsif calculatorButton.name == 'cancel' %}
+        text-red-700
+        bg-red-100
+        hover:bg-red-200
+        border-red-700
+        {% else %}
+        bg-slate-100
+        hover:bg-slate-200
+        border-slate-700
+        {% endif %}
+        "
+      >
+          {{ calculatorButton.text }}
+        </button>
+      {% endfor %}
+    </div>
+  </div>
+</section>

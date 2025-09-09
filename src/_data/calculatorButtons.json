@@ -1,0 +1,82 @@
+[
+  {
+    "name": "cancel",
+    "text": "C"
+  },
+  {
+    "name": "l_paren",
+    "text": "("
+  },
+  {
+    "name": "r_paren",
+    "text": ")"
+  },
+  {
+    "name": "divide",
+    "text": "/"
+  },
+  {
+    "name": "number-7",
+    "text": "7"
+  },
+  {
+    "name": "number-8",
+    "text": "8"
+  },
+  {
+    "name": "number-9",
+    "text": "9"
+  },
+  {
+    "name": "multiply",
+    "text": "*"
+  },
+  {
+    "name": "number-4",
+    "text": "4"
+  },
+  {
+    "name": "number-5",
+    "text": "5"
+  },
+  {
+    "name": "number-6",
+    "text": "6"
+  },
+  {
+    "name": "subtract",
+    "text": "-"
+  },
+  {
+    "name": "number-1",
+    "text": "1"
+  },
+  {
+    "name": "number-2",
+    "text": "2"
+  },
+  {
+    "name": "number-3",
+    "text": "3"
+  },
+  {
+    "name": "add",
+    "text": "+"
+  },
+  {
+    "name": "delete",
+    "text": "Del"
+  },
+  {
+    "name": "number-0",
+    "text": "0"
+  },
+  {
+    "name": "dot",
+    "text": "."
+  },
+  {
+    "name": "equals",
+    "text": "="
+  }
+]
