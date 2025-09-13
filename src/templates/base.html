@@ -32,21 +32,7 @@
     <link rel="stylesheet" href="/css/output.css">
   </head>
   <body>
-    <div class="w-full lg:w-1/2 mx-auto">
-      <nav class="flex flex-col sm:flex-row sm:items-center justify-between px-4 lg:px-0">
-        <a href="/" rel="noreferrer noopener">
-          <figure class="flex items-center">
-            <img src="/images/icon.webp" alt="Site icon." class="w-16">
-            <figcaption class="flex flex-col">
-              <span>GEO</span>
-              <span>GLGRN.</span>
-            </figcaption>
-          </figure>
-        </a>
-        <h1 class="text-2xl">ジョフリ</h1>
-      </nav>
-      <main>{{ content }}</main>
-    </div>
+    {{ content }}
     {% if js %}<script src="/js/{{ js }}"></script>{% endif %}
   </body>
 </html>
