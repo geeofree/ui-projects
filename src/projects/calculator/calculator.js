@@ -36,6 +36,7 @@ function main() {
           try {
             const tokens = tokenize(input);
             const ast = parse(tokens);
+            console.log(ast);
             input = [interpret(ast)];
           } catch (error) {
             console.error(error);
@@ -148,12 +149,6 @@ function parse(tokens) {
   }
 
   function parenthesis() {
-    if (matchesToken(TOKEN_TYPES.L_PAREN)) {
-      const expr = expression();
-      if (consumeToken(TOKEN_TYPES.R_PAREN) === null) throw new Error('Expected ")" after expression');
-      return createGroupingExpr(expr);
-    }
-
     return factor();
   }
 
@@ -184,7 +179,14 @@ function parse(tokens) {
   function digit() {
     if (matchesToken(TOKEN_TYPES.L_PAREN)) {
       const expr = expression();
+
       if (consumeToken(TOKEN_TYPES.R_PAREN) === null) throw new Error('Expected ")" after expression');
+
+      if (matchesToken(TOKEN_TYPES.NUMBER)) {
+        const right = previousToken();
+        return createBinaryExpr(expr, createToken(TOKEN_TYPES.MUL, '*'), right);
+      }
+
       return createGroupingExpr(expr);
     }
 
