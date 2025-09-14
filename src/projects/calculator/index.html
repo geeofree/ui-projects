@@ -1,13 +1,11 @@
 ---
-layout: base.html
-title: Calculator
+title: "Calculator Interpreter"
 description: "A calculator implemented with an interpreter."
 js: calculator.js
-project_name: calculator
 ---
 
-<section class="py-8 px-4 lg:p-8 flex justify-center items-center">
-  <div id="calculator-container" class="flex flex-col w-full md:max-w-lg border border-slate-900 rounded">
+<div class="p-4 flex flex-col justify-center items-center gap-4 min-h-screen">
+  <section id="calculator-container" class="flex flex-col w-full sm:max-w-lg border border-slate-900 rounded">
     <div id="calculator-screen" class="
       rounded flex items-center justify-end p-4
       text-white
@@ -46,13 +44,13 @@ project_name: calculator
         {% endif %}
         "
       >
-          {{ calculatorButton.text }}
-        </button>
+        {{ calculatorButton.text }}
+      </button>
       {% endfor %}
     </div>
-  </div>
-</section>
+  </section>
 
-<footer class="py-8 px-4 lg:p-8 flex justify-center items-center gap-2">
-  View code on <a target="_blank" class="text-blue-400 visited:text-indigo-600 after:block after:bottom-0 after:h-1 after:w-full data-[active=true]:text-blue-600 data-[active=true]:after:bg-blue-600 after:skew-x-0 after:skew-y-3 after:rounded" rel="noreferrer noopener" href="https://github.com/geeofree/ui-projects/tree/main/src/projects/calculator">My GitHub</a>
-</footer>
+  <footer>
+    View code on <a target="_blank" class="text-blue-400 visited:text-indigo-600 after:block after:bottom-0 after:h-1 after:w-full data-[active=true]:text-blue-600 data-[active=true]:after:bg-blue-600 after:skew-x-0 after:skew-y-3 after:rounded" rel="noreferrer noopener" href="https://github.com/geeofree/ui-projects/tree/main/src/projects/calculator">My GitHub</a>
+  </footer>
+</div>
